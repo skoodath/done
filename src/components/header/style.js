@@ -7,11 +7,19 @@ export const Header = {
   Wrapper: styled.header`
     background-color: ${palette.headerBG};
     padding: 1rem;
-    display: flex;
-    align-items: center;
     height: 50px;
     box-shadow: 1px 0 3px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   `,
+  Inner: styled.div`
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+  `,
+
   Menu: styled(IoMenu)`
     color: #ffffff;
     font-size: 2.5rem;

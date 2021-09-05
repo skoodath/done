@@ -3,22 +3,28 @@ import styled from "styled-components";
 
 export const Priorities = {
   PriorityList: styled.div`
-    height: 20px;
-    width: 100px;
+    height: 25px;
+    width: 105px;
     border-radius: 3px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: ${({ show }) => (show ? 1 : 0)};
+    overflow: hidden;
+    transition: opacity 0.3s ease-in;
+    transform-origin: left;
   `,
   PriorityListItemWrap: styled.div`
     border-radius: 3px;
     height: 20px;
     width: 20px;
     margin: 0 0.5rem 0 0;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    //box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #dddddd;
   `,
   PriorityListItem: styled.div`
     height: 15px;
@@ -80,7 +86,7 @@ export const TodoInput = {
   Wrapper: styled.div`
     height: 60px;
   `,
-  Input: styled.textarea`
+  Input: styled.input`
     font-size: 1.2rem;
     width: 100%;
     border: none;

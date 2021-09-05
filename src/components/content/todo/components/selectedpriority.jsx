@@ -1,8 +1,8 @@
 import { Priority } from "./style";
 
-const PriorityComponent = () => {
+const PriorityComponent = ({ handlePriority }) => {
   return (
-    <Priority.Priority>
+    <Priority.Priority onClick={handlePriority}>
       <Priority.Color />
     </Priority.Priority>
   );

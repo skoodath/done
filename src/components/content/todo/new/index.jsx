@@ -1,17 +1,21 @@
-import TodoInputComponent from "../components/new";
-import PrioritiesComponent from "../components/priorlist";
-import PriorityComponent from "../components/selectedpriority";
-
 import { Todo } from "./style";
+import { TodoInput } from "../components/style";
 
-const NewTodoComponent = () => {
+const NewTodoComponent = ({ handleSubmit, task, handleChange }) => {
   return (
     <Todo.Wrapper>
-      <TodoInputComponent />
-      <Todo.Buttons>
-        <PriorityComponent />
-        <PrioritiesComponent />
-      </Todo.Buttons>
+      <TodoInput.Wrapper>
+        <TodoInput.Input
+          placeholder="Add your task here"
+          value={task}
+          onChange={handleChange}
+          onKeyDown={handleSubmit}
+        />
+      </TodoInput.Wrapper>
+      {/* <Todo.Buttons>
+        <PriorityComponent handlePriority={handlePriority} />
+        <PrioritiesComponent show={priority} />
+      </Todo.Buttons> */}
     </Todo.Wrapper>
   );
 };

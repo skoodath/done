@@ -1,9 +1,9 @@
 import { TodoText } from "./style";
 
-const TodoTextComponent = () => {
+const TodoTextComponent = ({ list }) => {
   return (
     <TodoText.Wrapper>
-      <TodoText.Text>My First Task of the day</TodoText.Text>
+      <TodoText.Text>{list.task}</TodoText.Text>
     </TodoText.Wrapper>
   );
 };

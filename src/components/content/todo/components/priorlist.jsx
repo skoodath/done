@@ -1,8 +1,8 @@
 import { Priorities } from "./style";
 
-const PrioritiesComponent = () => {
+const PrioritiesComponent = ({ show }) => {
   return (
-    <Priorities.PriorityList>
+    <Priorities.PriorityList show={show}>
       <Priorities.PriorityListItemWrap>
         <Priorities.PriorityListItem bgcolor={"Red"} title="High" />
       </Priorities.PriorityListItemWrap>
