@@ -7,7 +7,6 @@ import { Todo } from "./style";
 
 const TodoComponent = ({ list }) => {
   const [priority, setFlag] = useState(false);
-  const [color, setColor] = useState("");
 
   const handlePriority = () => {
     setFlag(!priority);
